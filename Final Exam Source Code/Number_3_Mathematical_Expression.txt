@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author mdala
+ */
+// code with nesting
+
+
+import java.util.Scanner; 
+
+public class Main {
+    Scanner s;  
+    String nextWord; 
+    public  void main(String [] args) throws Exception{
+       mathematicalExpression();  
+       
+        }
+    
+    public void match(String t){
+        nextWord = s.next(); 
+        if(nextWord.equals(t)){
+            nextWord = s.next(); 
+        }else{
+            System.out.println("error");
+        }
+    }
+    
+   public void digit(){
+     if(nextWord.equals("0")){
+         match(nextWord); 
+     }else if(nextWord.equals("1")){
+         match(nextWord); 
+     }else if(nextWord.equals("2")){
+         match(nextWord); 
+     }else if(nextWord.equals("3")){
+         match(nextWord); 
+     }else if(nextWord.equals("4")){
+         match(nextWord); 
+     }else if(nextWord.equals("5")){
+         match(nextWord); 
+     }else if(nextWord.equals("6")){
+         match(nextWord); 
+     }else if(nextWord.equals("7")){
+         match(nextWord); 
+     }else if(nextWord.equals("8")){
+         match(nextWord); 
+     }else if(nextWord.equals("9")){
+         match(nextWord); 
+     }
+     nextWord = s.next(); 
+   }
+   
+   public void operand(){
+       if(nextWord.equals("+")){
+           match(nextWord); 
+       }else if(nextWord.equals("-")){
+           match(nextWord); 
+       }else if(nextWord.equals("*")){
+           match(nextWord); 
+       }else if(nextWord.equals("/")){
+           match(nextWord); 
+       }else if(nextWord.equals("%")){
+           match(nextWord); 
+       }
+       nextWord = s.next(); 
+    }
+   
+   public void num(){
+      digit(); 
+      nextWord = s.next(); 
+   }
+   
+   public void mathematicalExpression(){
+       num(); 
+       operand(); 
+       num(); 
+   }
+    
+    
+   
+    
+}

@@ -1,0 +1,58 @@
+A)
+
+j = -3; 
+        for(i = 0; i<3 && j<= 0; i++){
+            switch(j+2){
+                case 3:
+                case 2: j--; 
+                continue; 
+                case 0: j += 2; 
+                continue; 
+                default: j = 0; 
+            }
+            j = 3 - i; 
+        }
+
+B) 
+
+ j = -3; 
+        for(i = 0; i<3; i++){
+            if(j+2==2 || j+2==3){
+                j--;
+            }else if(j+2 ==0){
+                j+=2; 
+            }else{
+                j=0; 
+            }
+            
+            if(j>0){
+                goto A
+            }
+            
+            j = 3-i; 
+        }
+
+
+C)
+
+j = -3; 
+        for(i=0; i<3; i++){
+            if(j+2==2 || j+2==3){
+                j--;
+            }else if(j+2==0){
+                j+=2; 
+                
+            }else{
+                j=0;
+            }
+            if(j>0){
+                break;
+            }
+            j=3-i; 
+        }
+
+D)
+The switch statement inside the for loop goes to the different cases of j+2, if j+2=3
+then j-- is executed. if j+2 =2 then j-- is executed and if j+2 = 0 then j+= 2 is executed.
+After that it exits out of the switch blocks and goes to the if statement, and if j>0 we exit
+loop, if j is negative then j=3-i and then the loop will execute again. 

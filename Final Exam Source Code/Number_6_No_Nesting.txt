@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author mdala
+ */
+// code without nesting
+import java.util.Scanner; 
+public class Main {
+    public static void main(String [] args){
+        Scanner s = new Scanner(System.in);
+        int max = 0; 
+        int min = 0; 
+        int mid = 0; 
+        System.out.println("Enter three numbers: ");
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int c = s.nextInt(); 
+        
+        if(a>b && a>c && b>c){
+            max = a; 
+            mid = b; 
+            min = c; 
+        }
+        if(a>b && a>c && c>b){
+        max = a; 
+        min = b; 
+        mid = c; 
+    }
+        if(b>c && b>a && a>c){
+            max = b; 
+            mid = a; 
+            min = c; 
+        }
+        
+        if(b>c && b>a && c>a){
+            max = b; 
+            mid = c; 
+            min = a; 
+        }
+        
+        if(c>a && c>b && a>b){
+            max = c; 
+            mid = a; 
+            min = b; 
+        }
+        
+        if(c>a && c>b && b>a){
+            max = c; 
+            mid = b; 
+            min = a; 
+                   
+        }
+        System.out.println("Max is " +max);
+        System.out.println("Mid is " +mid);
+        System.out.println("Min is " +min);
+        
+       
+    }
+    
+}
